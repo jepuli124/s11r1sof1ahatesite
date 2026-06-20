@@ -12,7 +12,7 @@ function App() {
       <section id="center">
         <div className="hero">
           <DragableElement keyId='S11ri' freeze={true} hide={true}>
-            <img src='./s11r1.png' style={{width: "20wv", height: "20vh"}}></img>
+            <img src='./s11r2.png' style={{width: "20wv", height: "20vh"}}></img>
           </DragableElement>
           <DropBox keyId={"S11ri"}>
             <img src="./bin.png" alt="" style={{width: "20wv", height: "20vh"}} />
