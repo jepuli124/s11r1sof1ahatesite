@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://jepuli124.github.io/s11r1sof1ahatesite/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -11,6 +12,7 @@
   },
   "dependencies": {
     "animejs": "^4.4.1",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
