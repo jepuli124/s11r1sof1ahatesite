@@ -3,13 +3,21 @@ import { useState } from 'react'
 import './App.css'
 import DragableElement from './components/DragableElement'
 import DropBox from './components/DropBox'
+import Sparkles from './components/Sparkles'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [spawnParticles, setSpawnParticles] = useState<boolean>(false)
 
   return (
     <>
-      <section id="center">
+      <section id="center" onClick={() => {
+        setSpawnParticles(true)
+        const ti = setTimeout(() => {
+          clearTimeout(ti)
+          setSpawnParticles(false)
+        }, 10);
+      }}>
         <div className="hero">
           <DragableElement keyId='S11ri' freeze={true} hide={true}>
             <img src='./s11r2.png' style={{width: "20wv", height: "20vh"}}></img>
@@ -21,7 +29,8 @@ function App() {
         <div>
           <h1>Welcome to S11risof1a hate site</h1>
           <p>
-            Here we hate s11risof1a very much
+            Here we hate s11risof1a very much.
+            You may banish her to the island by dragging.
           </p>
         </div>
         <button
@@ -75,6 +84,7 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+      <Sparkles spawnParticles={spawnParticles}></Sparkles>
     </>
   )
 }
